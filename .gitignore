@@ -1,0 +1,21 @@
+public
+
+# IDEs
+.idea/
+
+# Node.js
+node_modules
+
+# Hugo
+resources
+
+# Hexo
+db.json
+.deploy*
+*.log
+
+# macOS
+.DS_Store
+
+# ipfs-deploy
+.env

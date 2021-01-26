@@ -1,0 +1,45 @@
+baseURL = "https://ziweipan.me"
+title = "Ziwei Pan 潘紫薇"
+
+# Comment when installing using Hugo Modules
+ theme = "eureka"
+# Uncomment when installing using Hugo Modules
+# theme = "github.com/wangchucheng/hugo-eureka"
+
+paginate = 3
+copyright = "&copy; 2019-{year} Ziwei Pan"
+enableEmoji = true
+enableGitInfo = false
+summaryLength = 40
+
+defaultContentLanguage = "en"
+hasCJKLanguage = true  # Set `true` for Chinese/Japanese/Korean.
+defaultContentLanguageInSubdir = true
+
+# Uncomment for google analytics
+# googleAnalytics = "UA-123-45"
+
+[markup]
+  # Do not modify markup.highlight
+  [markup.highlight]
+    codeFences = false
+    noClasses = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+    ordered = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+
+[permalinks]
+    tags = "/tags/:slug/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "authors"
+
+[build]
+  useResourceCacheWhen = "always"
+
