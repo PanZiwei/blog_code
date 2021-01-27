@@ -1,8 +1,4 @@
-# blog_code
-Ziwei's website
-
-
-# io-oi.me
+# ziweipan.me
 
 [![Built on GitHub](hthttps://github.com/PanZiwei/PanZiwei.github.io/workflows/build/badge.svg)](https://github.com/PanZiwei/PanZiwei/actions)
 [![Generator is Hugo](https://img.shields.io/badge/Generator-Hugo-ff4088?&logo=hugo)](https://github.com/gohugoio/hugo)
