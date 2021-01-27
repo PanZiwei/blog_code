@@ -1,3 +1,4 @@
+# .github/workflows/build.yml
 name: build
 
 # Controls when the action will run. 
@@ -18,7 +19,6 @@ jobs:
     steps:
       - name: 'Building...'
         uses: reuixiy/hugo-deploy@v1 
-        # .github/workflows/build.yml
         env: ##Pay attention to code indentation below
           DEPLOY_REPO: PanZiwei/PanZiwei.github.io  # The deploy repo location for object code, not the source code
           DEPLOY_BRANCH: master  
