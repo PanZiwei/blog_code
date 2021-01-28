@@ -5,15 +5,14 @@ lastmod = "2021-01-28T16:17:15-05:00"
 categories = ["bioinfo"]
 tags = [""]
 slug = "reference_genome"
-toc = true
+toc = false
 draft = false
 +++
 
 A brief introduction for reference genome.
 
-# Human genome 
+## Human reference genome
 
-## Link
 GRCh38:
 
 GRCh38.p13(latest version): 
@@ -22,9 +21,7 @@ https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.39
 
 ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
 
-By chromosome: 
-
-ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/
+By chromosome: ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/
 
 GRCh37:
 
@@ -32,10 +29,7 @@ ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRC
 
 ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/hg19Patch13/hg19Patch13.fa.gz 
 
-GRCh37.p13(latest version): 
-
-https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.13/
-
+GRCh37.p13(latest version): https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.13/
 
 ## Download command
 ```
@@ -54,7 +48,8 @@ Ensembl advise using the full toplevel fasta reference when doing CrossMapping, 
 contains all toplevel sequence regions excluding haplotypes and patches. This file is best used for performing sequence similarity searches
 where patch and haplotype sequences would confuse analysis. 
 
-# Reference
+## Reference
+
 [GATK: Reference genome](https://gatk.broadinstitute.org/hc/en-us/articles/360035891071)
 
 [GATK: Human genome reference builds - GRCh38 or hg38 - b37 - hg19](https://gatk.broadinstitute.org/hc/en-us/articles/360035890951-Human-genome-reference-builds-GRCh38-or-hg38-b37-hg19)
