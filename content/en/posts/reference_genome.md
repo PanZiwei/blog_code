@@ -9,20 +9,31 @@ toc = true
 draft = false
 +++
 
+A brief introduction for reference genome.
+
 # Human genome 
 
 ## Link
 GRCh38:
 
 GRCh38.p13(latest version): 
+
 https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.39
+
 ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz
-By chromosome: ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/
+
+By chromosome: 
+
+ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/
 
 GRCh37:
+
 ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna_sm.primary_assembly.fa.gz
+
 ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/hg19Patch13/hg19Patch13.fa.gz 
+
 GRCh37.p13(latest version): 
+
 https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.13/
 
 
