@@ -31,13 +31,17 @@ ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/hg19Patch13/hg19Patch13.fa.gz
 
 GRCh37.p13(latest version): https://www.ncbi.nlm.nih.gov/assembly/GCF_000001405.13/
 
-## Download command
+### Download command
 ```
 wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz \
 -O -| gunzip -c > target_location
 ```
+### Create the fasta index file
+```
+samtools faidx ref.fasta
+```
 
-## toplevel fasta VS primiary_assembly fasta
+## toplevel fasta VS primary_assembly fasta
 
 **toplevel fasta**
 
