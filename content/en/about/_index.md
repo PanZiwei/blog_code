@@ -24,3 +24,6 @@ The website is build by [Hugo](https://gohugo.io/) with theme [Eureka](https://g
 2021-01-09: Enabled multilingual mode in Hugo Coder theme!
 
 2019-11-25: Initiated my website v1.0 with Hugo, Github, Netlify and R package “blogdown”!
+
+
+The content on this website is distributed under [MIT License](https://opensource.org/licenses/MIT).

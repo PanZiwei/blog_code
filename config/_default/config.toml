@@ -44,9 +44,6 @@ defaultContentLanguageInSubdir = true
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
     toc = false
 
-[params.cc]
-    name = "CC BY-NC-ND 4.0"
-    link = "https://creativecommons.org/licenses/by-nc-nd/4.0/"
 
 [build]
   useResourceCacheWhen = "always"
