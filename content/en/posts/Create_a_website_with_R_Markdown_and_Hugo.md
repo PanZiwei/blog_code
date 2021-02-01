@@ -8,10 +8,11 @@ slug = "Create_a_website_with_R_Markdown_and_Hugo"
 toc = true
 draft = false
 +++
-<!-- TOC -->
-<!-- /TOC -->
 
 In this tutorial I will show you how to create your own website with R package `blogdown`, Hugo, Github, and Netlify in 1h without any background.
+
+<!--more-->
+
 
 # Program setting
 Before creating the website, we have to install several softwares.

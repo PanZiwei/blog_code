@@ -42,6 +42,7 @@ defaultContentLanguageInSubdir = true
 
 [frontmatter]
     lastmod = ["lastmod", ":git", ":fileModTime", ":default"]
+    toc = false
 
 [params.cc]
     name = "CC BY-NC-ND 4.0"
