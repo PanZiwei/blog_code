@@ -11,6 +11,8 @@ draft = false
 
 A brief introduction for reference genome.
 
+<!--more-->
+
 ## Human reference genome
 
 GRCh38:
