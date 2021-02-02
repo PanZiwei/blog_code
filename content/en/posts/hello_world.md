@@ -1,11 +1,10 @@
 +++
 title = "Hello, world!"
 date = "2019-11-25T16:53:11-05:00"
-lastmod = "2019-11-25T16:53:11-05:00"
 categories = [ ]
 tags = [ ]
 slug = "hello_world"
-toc = true
+toc = false
 draft = false
 +++
 

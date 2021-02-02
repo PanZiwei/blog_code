@@ -1,7 +1,6 @@
 +++
 title = "Create a website with R Markdown and Hugo"
 date = "2019-12-03T17:56:58-05:00"
-lastmod = "2021-01-26T18:12:58-05:00"
 categories = ["Website"]
 tags = ["Hugo","R markdown"]
 slug = "Create_a_website_with_R_Markdown_and_Hugo"

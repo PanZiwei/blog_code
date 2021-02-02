@@ -1,11 +1,10 @@
 +++
 title = "JupyterLab Keyboard Shortcut"
 date = "2019-12-04T10:50:11-05:00"
-lastmod = "2019-12-04T10:50:11-05:00"
 categories = [ ]
 tags = ["jupyter"]
 slug = "JupyterLab_keyboard_shortcut"
-toc = true
+toc = false
 draft = false
 +++
 
