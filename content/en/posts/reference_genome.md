@@ -36,7 +36,10 @@ ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/hg19Patch13/hg19Patch13.fa.gz
 ### Download command
 ```
 wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz \
--O -| gunzip -c > target_location
+-O -|gunzip -c > target_location/GRch38.fa
+
+wget ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.primary_assembly.fa.gz \
+-O -|gunzip -c > target_location/GRCh37.fa
 ```
 
 ### Create the fasta index file
@@ -48,16 +51,15 @@ samtools faidx ref.fasta
 
 ### toplevel fasta VS primary_assembly fasta
 
-**toplevel fasta**
+- toplevel fasta
 
 Ensembl advise using the full toplevel fasta reference when doing CrossMapping, and for GRCh38, that file is HUGE, (36G instead of the usual 3G, containing all the ALT sequences). As CrossMap loads the reference into memory, this makes a big difference. However, the resulting mapped files are identical for mappings made with the toplevel file as with the primary_assembly file (which does not contain all the ALT seqs), so it is preferable to use the latter from a resources point of view.
 
-**Primary assembly**
+- Primary assembly
 
-contains all toplevel sequence regions excluding haplotypes and patches. This file is best used for performing sequence similarity searches
-where patch and haplotype sequences would confuse analysis. 
+contains all toplevel sequence regions excluding haplotypes and patches. This file is best used for performing sequence similarity searches where patch and haplotype sequences would confuse analysis. 
 
-### .fa / .fna / .faa/ .ffn/ .mpfa/ .frn/ .fastq
+### Different FASTA format
 
 .fasta, .fas, .fa, .seq, .fsa: Generic FASTA
 
@@ -75,7 +77,7 @@ where patch and haplotype sequences would confuse analysis.
 
 ### GRCh37 issue
 
-**GRCh37 hg19 b37 humanG1Kv37 - Human Reference Discrepancies**
+- GRCh37 hg19 b37 humanG1Kv37 - Human Reference Discrepancies**
 
 There are 4 common "hg19" references, and they are NOT directly interchangeable:
 
@@ -89,7 +91,7 @@ There are 4 common "hg19" references, and they are NOT directly interchangeable:
 
 More details: https://gatk.broadinstitute.org/hc/en-us/articles/360035890711-GRCh37-hg19-b37-humanG1Kv37-Human-Reference-Discrepancies
 
-**prefix "chr" issue**
+-  prefix "chr" issue
 
 hg19 or early releases of GRCh37 like `GRCh37-lite`, did not use chr-prefixes, but newer releases like `GRCh37.p13` adopted the chr-prefix, and use a newer mitochondrial (MT) sequence than hg19 does. chrM in hg19 is named MT in GRCh37. 
 ```
@@ -99,7 +101,25 @@ nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 ```
-!Attention: DO NOT use `sed`/`cat` or other find/replace tools to fix this problem yourself (unless you are extremely bandwidth-constrained or no option to download a properly-formatted reference FASTA).
+!Attention: DO NOT use `sed`/`cat` or other find/replace tools to fix this problem yourself (unless you are extremely bandwidth-constrained or no option to download a properly-formatted reference FASTA). 
+
+**Modify chromosome names: with "chr" prefix or without**
+
+Be very careful to use the command below: 
+```
+# add chr
+sed 's/^>/>chr/' GRCh37.fa > GRCh37_new.fa
+
+# or
+awk 'BEGIN {OFS = "\t"} {$1="chr"$1; print}'
+
+# or A faster option, from the BBMap package:
+bbrename.sh in=file.fasta out=renamed.fasta prefix=ch addprefix=t
+
+
+# remove chr
+sed 's/^chr//' GRCh37.fa > GRCh37_new.fa
+```
 
 More discussion: [Question: Human dna reference file with no prefix 'chr'](https://www.biostars.org/p/119295/#119308)
 
@@ -116,6 +136,8 @@ More discussion: [Question: Human dna reference file with no prefix 'chr'](https
 [关于人类基因组的一些说明](https://wenlongshen.github.io/2020/03/26/Reference-Genome/)
 
 https://wabi-wiki.scilifelab.se/display/SHGATG/gatk+bundle+in+hg38
+
+[生物信息学数据库资源](https://github.com/jmzeng1314/bioinformatics123/blob/master/appendix/database.md)
 
 ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/README
 
