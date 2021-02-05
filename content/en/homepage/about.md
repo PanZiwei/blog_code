@@ -3,12 +3,12 @@ title = "Ziwei Pan"
 weight = 1
 draft = false
 
-role = "Student"
+role = "Turbulent Adventurer (ISFP-T)"
 bio = "An ambidextrous person."
 avatar = "images/avatar.png"
 
 [organization]
-  name = "Uconn Health & The Jackson Laboratory"
+#  name = "Uconn Health & The Jackson Laboratory"
 #  url = "https://example.com/"
 
 [[social]]
