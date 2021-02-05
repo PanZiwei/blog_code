@@ -6,8 +6,6 @@ draft = false
 
 ## Self Introduction
 
-#- PhD student: Biomedical Sciences, focus on genetics and epigenetics.
-
 - Turbulent Adventurer: ISFP-T
   
 - Amateur musician: Erhu player, Xiao (flute) beginner.

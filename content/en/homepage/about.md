@@ -3,8 +3,8 @@ title = "Ziwei Pan"
 weight = 1
 draft = false
 
-role = "Turbulent Adventurer (ISFP-T)"
-bio = "An ambidextrous person."
+role = "Student"
+bio = "An ambidextrous person. Turbulent Adventurer (ISFP-T)"
 avatar = "images/avatar.png"
 
 [organization]
