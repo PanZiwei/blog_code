@@ -33,18 +33,44 @@ ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRC
 ftp://hgdownload.cse.ucsc.edu/goldenPath/hg19/hg19Patch13/hg19Patch13.fa.gz 
 
 
+## Download 
+
 ### Download command
-```
+
+! Attention: Remember to create the fasta index file for later usage.
+
+**GRch38**:
+```shell
 wget ftp://ftp.ensembl.org/pub/current_fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna_sm.primary_assembly.fa.gz \
--O -|gunzip -c > target_location/GRch38.fa
+-O -|gunzip -c > $reference_dir/GRch38.fa
+### Create the fasta index file for later usage
+samtools faidx $reference_dir/GRch38.fa
 
+>chr1
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+```
+
+**GRch37**:
+```shell
+# Ensembl version:
 wget ftp://ftp.ensembl.org/pub/grch37/current/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.dna.primary_assembly.fa.gz \
--O -|gunzip -c > target_location/GRCh37.fa
-```
+-O -|gunzip -c > $reference_dir/GRCh37.fa
+samtools faidx $reference_dir/GRCh37.fa
 
-### Create the fasta index file
-```
-samtools faidx ref.fasta
+>1 dna:chromosome chromosome:GRCh37:1:1:249250621:1 REF
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+
+or
+# NCBI version:
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/refseq/vertebrate_mammalian/Homo_sapiens/all_assembly_versions/GCF_000001405.25_GRCh37.p13/GCF_000001405.25_GRCh37.p13_genomic.fna.gz \
+-O -|gunzip -c > $reference_dir/GRCh37.new.fa
+samtools faidx $reference_dir/GRCh37.new.fa
+
+>NC_000001.10 Homo sapiens chromosome 1, GRCh37.p13 Primary Assembly
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
 ```
 
 ## Other issue
