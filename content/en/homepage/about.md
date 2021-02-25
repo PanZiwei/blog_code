@@ -4,11 +4,11 @@ weight = 1
 draft = false
 
 role = "Student"
-bio = "An ambidextrous person."
+bio = "An ambidextrous person. Turbulent Adventurer (ISFP-T)"
 avatar = "images/avatar.png"
 
 [organization]
-  name = "Uconn Health & The Jackson Laboratory"
+#  name = "Uconn Health & The Jackson Laboratory"
 #  url = "https://example.com/"
 
 [[social]]
